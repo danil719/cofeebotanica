@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Ponomar&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ponomar', cursive;
+  background-image: url('recraftv3_67cf4ba2e72c05825bb73d9d.jpeg'); /* Статичный фон */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Занимает всю высоту экрана */
+}
+
+.title {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Ponomar', cursive;
+  font-size: 80px; /* Увеличенный размер шрифта */
+  text-transform: uppercase;
+  color: transparent;
+  background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif); /* Начальный GIF */
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin: 0;
+}
+
+/* Кнопка в виде отпечатка пальца */
+.fingerprint-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон */
+  border: 2px solid #fff; /* Белая рамка */
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* Центрируем кнопку */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Тень для кнопки */
+}
+
+/* Иконка отпечатка пальца */
+.fingerprint-button::before {
+  content: '🖐️'; /* Эмодзи отпечатка пальца */
+  font-size: 30px;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 60px; /* Уменьшаем размер шрифта для мобильных */
+  }
+
+  .fingerprint-button {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+  }
+
+  .fingerprint-button::before {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 40px; /* Еще меньше размер шрифта для очень маленьких экранов */
+  }
+
+  .fingerprint-button {
+    width: 40px;
+    height: 40px;
+    bottom: 10px;
+  }
+
+  .fingerprint-button::before {
+    font-size: 20px;
+  }
+}
